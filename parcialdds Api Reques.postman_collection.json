@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "0833b482-f7ce-4aba-8cca-ad9a92cb9575",
 		"name": "persona Api Reques",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "30335326"
 	},
 	"item": [
@@ -21,18 +21,7 @@
 					"mode": "raw",
 					"raw": "{\r\n    \"nombre\":\"wanchope\",\r\n    \"apellido\": \"abila\",\r\n    \"dni\":9122018\r\n}"
 				},
-				"url": {
-					"raw": "http://localhost:9000/APISP/persona",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9000",
-					"path": [
-						"APISP",
-						"persona"
-					]
-				}
+				"url": "http://localhost:9000/APISP/persona"
 			},
 			"response": []
 		},
@@ -41,30 +30,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/v1/personas/paged?page=0&size=5",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"v1",
-						"personas",
-						"paged"
-					],
-					"query": [
-						{
-							"key": "page",
-							"value": "0"
-						},
-						{
-							"key": "size",
-							"value": "5"
-						}
-					]
-				}
+				"url": "http://localhost:8080/api/v1/localidad"
 			},
 			"response": []
 		},
@@ -128,6 +94,38 @@
 						{
 							"key": "page",
 							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/personas/paged?page=0&size=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"personas",
+						"paged"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
 						},
 						{
 							"key": "size",
