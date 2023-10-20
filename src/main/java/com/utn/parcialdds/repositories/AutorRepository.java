@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface AutorRepository extends BaseRepository<Autor,Long>{
 
-    //Query JPQL parametros indexados ? - 1// nombrados
+    //Query JPQL parametros indexados
     @Query(value = "SELECT a FROM Autor a WHERE a.nombre LIKE %:filtro% OR a.apellido LIKE %:filtro% ")
     List<Autor> searchAutor(@Param("filtro") String filtro);
 

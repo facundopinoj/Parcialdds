@@ -20,7 +20,7 @@ public class Domicilio extends Base{
     @Column(name = "numero")
     private int numero;
 
-    //Domicilio a localidad - Relacion
+    //Domicilio a localidad
     @ManyToOne(optional = false)
     @JoinColumn(name = "fk_localidad")
     private Localidad localidad;

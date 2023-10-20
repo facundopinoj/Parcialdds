@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping(path = "api/v1/localidades") // Ejemplos: http://localhost:8080/api/v1/localidades
+@RequestMapping(path = "api/v1/localidades")
 public class LocalidadController extends BaseControllerImpl<Localidad, LocalidadServiceImpl>{
 
-    @GetMapping("/search") // Ejemplos: http://localhost:8080/api/v1/localidades/search?filtro=Godoy
+    @GetMapping("/search")
     public ResponseEntity<?> searchLocalidad(@RequestParam String filtro){
         try{
             return ResponseEntity.status(HttpStatus.OK).body(servicio.searchLocalidad(filtro));
@@ -24,7 +24,7 @@ public class LocalidadController extends BaseControllerImpl<Localidad, Localidad
 
     //PAGINACION
 
-    @GetMapping("/searchPaged") // Ejemplos: http://localhost:8080/api/v1/localidades/searchPaged?filtro=Godoy&page=0&size=5&sort=id,asc
+    @GetMapping("/searchPaged")
     public ResponseEntity<?> searchLocalidadPaged(@RequestParam String filtro, Pageable pageable){
         try{
             return ResponseEntity.status(HttpStatus.OK).body(servicio.searchLocalidadPaged(filtro, pageable));

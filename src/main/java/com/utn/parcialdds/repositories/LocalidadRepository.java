@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface LocalidadRepository extends BaseRepository<Localidad, Long>{
 
-    //Query JPQL parametros indexados ? - 1// nombrados
+    //Query JPQL parametros indexados
     @Query(value = "SELECT l FROM Localidad l WHERE l.denominacion LIKE %:filtro%  ")
     List<Localidad> searchLocalidad(@Param("filtro")String filtro);
 

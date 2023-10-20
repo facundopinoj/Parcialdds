@@ -26,12 +26,12 @@ public class Persona extends Base {
     private String nombre;
 
 
-    //Persona a domicilio - Relacion
+    //Persona a domicilio
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_domicilio")
     private Domicilio domicilio;
 
-    //Persona a libro - Relacion
+    //Persona a libro
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinTable(
             name = "persona_libro",

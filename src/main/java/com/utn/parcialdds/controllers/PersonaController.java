@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping(path ="api/v1/personas") // Ejemplos: http://localhost:8080/api/v1/personas
+@RequestMapping(path ="api/v1/personas")
 public class PersonaController extends BaseControllerImpl<Persona, PersonaServiceImpl>{
 
-    @GetMapping("/search") // Ejemplos: http://localhost:8080/api/v1/personas/search?filtro=Pedro
+    @GetMapping("/search")
     public ResponseEntity<?> searchPersona(@RequestParam String filtro){
         try{
             return ResponseEntity.status(HttpStatus.OK).body(servicio.searchPersona(filtro));
@@ -23,7 +23,7 @@ public class PersonaController extends BaseControllerImpl<Persona, PersonaServic
     }
 
     //PAGINACION
-    @GetMapping("/searchPaged") // Ejemplos: http://localhost:8080/api/v1/personas/searchPaged?filtro=Tomas&page=0&size=5&sort=id,asc
+    @GetMapping("/searchPaged")
     public ResponseEntity<?> searchPersonaPaged(@RequestParam String filtro, Pageable pageable){
         try{
             return ResponseEntity.status(HttpStatus.OK).body(servicio.searchPersonaPaged(filtro, pageable));
